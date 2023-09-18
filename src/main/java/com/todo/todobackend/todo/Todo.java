@@ -25,10 +25,20 @@ public class Todo {
     )
 
     private Long id;
-    private String cont;
-    private LocalDate dt;
-    private String delYn;
+    private String item;
+    private LocalDate startDate;
+    private LocalDate updateDate;
+    private String isCompleted;
+    private String isDeleted;
     @Transient
-    private String editYn;
+    private String isEditing;
+
+    public Todo(String item, LocalDate startDate, LocalDate updateDate, String isCompleted, String isDeleted){
+        this.item = item;
+        this.startDate = startDate;
+        this.updateDate = updateDate;
+        this.isCompleted = isCompleted;
+        this.isDeleted = isDeleted;
+    }
 
 }

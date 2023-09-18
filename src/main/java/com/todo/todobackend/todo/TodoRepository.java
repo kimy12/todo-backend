@@ -9,7 +9,7 @@ import java.util.Optional;
 @Repository
 public interface TodoRepository extends JpaRepository<Todo, Long> {
 
-    @Query(value = "SELECT s FROM todo s where s.id =?1", nativeQuery = true)
-    Optional<Todo> findTodoById(Long id);
+    @Query(value = "SELECT s FROM todo s where s.del_yn ='N'", nativeQuery = true)
+    Optional<Todo> findTodoById();
 
 }

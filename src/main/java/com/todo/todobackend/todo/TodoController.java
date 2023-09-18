@@ -16,5 +16,8 @@ public class TodoController {
     public TodoController(TodoService todoService) {this.todoService = todoService;}
 
     @GetMapping
-    public List<Todo> getTodos() {return todoService.getTodos();}
+    public List<Todo> getTodos() {
+
+        return todoService.getTodos();
+    }
 }
