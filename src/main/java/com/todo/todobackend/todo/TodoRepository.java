@@ -7,9 +7,10 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
 @Repository
-public interface TodoRepository extends JpaRepository<Todo, Long> {
+public interface TodoRepository
+        extends JpaRepository<Todo, Long> {
 
-    @Query(value = "SELECT s FROM todo s where s.del_yn ='N'", nativeQuery = true)
-    Optional<Todo> findTodoById();
+   @Query(value = "SELECT s FROM todo s where s.id =?1", nativeQuery = true)
+    Optional<Todo> findTodoById(String id);
 
 }

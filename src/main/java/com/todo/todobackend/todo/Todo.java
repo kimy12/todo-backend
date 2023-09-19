@@ -10,7 +10,7 @@ import java.time.LocalDate;
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
 public class Todo {
 
     @Id
@@ -39,6 +39,10 @@ public class Todo {
         this.updateDate = updateDate;
         this.isCompleted = isCompleted;
         this.isDeleted = isDeleted;
+    }
+
+    public Todo(){
+
     }
 
 }
