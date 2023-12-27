@@ -2,15 +2,16 @@ package com.todo.todobackend.todo;
 
 import lombok.*;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "todo", schema = "local_todo")
+@Table(name = "todo")
+//@Table(name = "todo", schema = "local_todo")
 @Getter
 @Setter
 @ToString
-@NoArgsConstructor
+//@NoArgsConstructor
 public class Todo {
 
     @Id
